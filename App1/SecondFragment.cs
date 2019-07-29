@@ -15,6 +15,20 @@ namespace App1
 {
     public class SecondFragment : Fragment
     {
+        SearchView mySearch;
+
+        List<UserObject> mysnackList;
+        public String myName;
+        public Activity myContext;
+        ArrayAdapter myAdapter;
+
+        public SecondFragment(string name, List<UserObject> templist, Activity context)
+        {
+            myName = name;
+            mysnackList = templist;
+            myContext = context;
+        }
+
         public override void OnCreate(Bundle savedInstanceState)
         { 
             base.OnCreate(savedInstanceState);
@@ -29,9 +43,40 @@ namespace App1
             // Use this to return your custom view for this Fragment
             View myView = inflater.Inflate(Resource.Layout.SecondTabLayout, container, false);
 
+            ListView myList = myView.FindViewById<ListView>(Resource.Id.listID);
+            myView.FindViewById<TextView>(Resource.Id.myNameIdl).Text = myName;
+
+
+            MyCustomAdapter myAdapter = new MyCustomAdapter(myContext, mysnackList);
+
+            myList.Adapter = myAdapter;
+            myList.ItemClick += myIteamClickMethod;
+
+
             return myView;
             //return base.OnCreateView(inflater, container, savedInstanceState);
             
         }
+        public void mySearchMethod(object sender, SearchView.QueryTextChangeEventArgs e)
+        {
+
+            var mySearchValue = e.NewText;
+            System.Console.WriteLine("Search Text is :  is \n\n " + mySearchValue);
+
+
+
+        }
+        public void myIteamClickMethod(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            System.Console.WriteLine("I am clicking on the list item \n\n");
+            var indexValue = e.Position+4;
+
+            Intent intent = new Intent(this.Activity, typeof(iteminfo));
+            intent.PutExtra("item_id", indexValue);
+            StartActivity(intent);
+            //var myValue = movieArray[indexValue];
+            // System.Console.WriteLine("Value is \n\n " + myValue);
+        }
+
     }
 }

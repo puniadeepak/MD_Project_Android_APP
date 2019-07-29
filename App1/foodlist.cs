@@ -16,7 +16,8 @@ namespace App1
     public class foodlist : Activity
     {
         List<UserObject> myUsersList2 = new List<UserObject>();
-        
+        List<UserObject> mysnackList2 = new List<UserObject>();
+
 
         Fragment[] _fragmentsArray;
         string name = "Welcome To my App";
@@ -31,16 +32,22 @@ namespace App1
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.foodlist);
-            //adding items to list
-            myUsersList2.Add(new UserObject("Mike", "21", Resource.Drawable.pin));
-            myUsersList2.Add(new UserObject("Mike2", "23", Resource.Drawable.pin));
-            myUsersList2.Add(new UserObject("Mike2", "24", Resource.Drawable.pin));
-            myUsersList2.Add(new UserObject("Mike2", "25", Resource.Drawable.pin));
+            //adding items to drink list
+            myUsersList2.Add(new UserObject("Coffee", "1.99", Resource.Drawable.drink1));
+            myUsersList2.Add(new UserObject("Dark Roast", "2.99", Resource.Drawable.drink2));
+            myUsersList2.Add(new UserObject("Lemonade", "2.99", Resource.Drawable.drink3));
+            myUsersList2.Add(new UserObject("Choco Chips", "2.00", Resource.Drawable.drink4));
+
+            //adding items to SANACK list
+            mysnackList2.Add(new UserObject("Bagel", "1.99", Resource.Drawable.snack1));
+            mysnackList2.Add(new UserObject("Sandwich", "2.99", Resource.Drawable.snack2));
+            mysnackList2.Add(new UserObject("Egg Wrap", "2.99", Resource.Drawable.snack3));
+            mysnackList2.Add(new UserObject("Chicken Wrap", "2.00", Resource.Drawable.snack4));
 
             _fragmentsArray = new Fragment[]
             {
             new Fragment1( "Mike",myUsersList2, this),
-            new SecondFragment(),
+            new SecondFragment("secondlist",mysnackList2, this ),
             
             };
 

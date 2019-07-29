@@ -212,3 +212,11 @@ F:\project\App1\App1\obj\Debug\81\android\assets\System.pdb
 F:\project\App1\App1\obj\Debug\81\android\assets\System.Runtime.Serialization.pdb
 F:\project\App1\App1\obj\Debug\81\android\assets\System.ServiceModel.Internals.pdb
 F:\project\App1\App1\obj\Debug\81\android\assets\System.Xml.pdb
+F:\project\App1\App1\obj\Debug\81\res\drawable\drink1.png
+F:\project\App1\App1\obj\Debug\81\res\drawable\drink2.png
+F:\project\App1\App1\obj\Debug\81\res\drawable\drink3.png
+F:\project\App1\App1\obj\Debug\81\res\drawable\drink4.png
+F:\project\App1\App1\obj\Debug\81\res\drawable\snack1.png
+F:\project\App1\App1\obj\Debug\81\res\drawable\snack2.png
+F:\project\App1\App1\obj\Debug\81\res\drawable\snack3.png
+F:\project\App1\App1\obj\Debug\81\res\drawable\snack4.png
