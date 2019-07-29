@@ -23,6 +23,14 @@ namespace App1
         Button editBtn, deleteBtn;
         DBHelperclass dbcn;
         Android.App.AlertDialog.Builder alert;
+        ListView myList;
+        SearchView mySearch;
+        List<string> locnArray = new List<string>(){ "Location-A", "Location-B",
+                "Location-C", "Location-D"};
+        List<string> locnArray2 = new List<string>(){ "Location-A", "Location-B",
+                "Location-C", "Location-D"};
+        
+        ArrayAdapter myAdapter;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -40,6 +48,7 @@ namespace App1
             editBtn = FindViewById<Button>(Resource.Id.editBtn);
             deleteBtn = FindViewById<Button>(Resource.Id.DeleteBtn);
             alert = new Android.App.AlertDialog.Builder(this);
+            myList = FindViewById<ListView>(Resource.Id.myListView);
 
             //assign value
             name.Text = valueFromLoginUser;
@@ -49,6 +58,15 @@ namespace App1
             /// ???
             dbcn = new DBHelperclass(this);
             myresut1 = dbcn.SelectUserdata(valueFromLoginUser, passwordFromLogin);
+
+            myAdapter = new ArrayAdapter
+                (this, Android.Resource.Layout.SimpleListItem1, locnArray);
+            myList.Adapter = myAdapter;
+            myList.ItemClick += myIteamClickMethod;
+
+            mySearch = FindViewById<SearchView>(Resource.Id.searchID);
+            //Search Events
+            mySearch.QueryTextChange += mySearchMethod;
 
             var myId1 = 1; var nameValue1 = ""; var emailValue1 = ""; var ageValue1 = ""; var passValue1 = "";
             //get cursor values
@@ -93,6 +111,8 @@ namespace App1
 
                 editBtn.Click += editBtnClicEvent;
                 deleteBtn.Click += editBtnClicEvent2;
+
+
             }
             else
             {
@@ -160,21 +180,21 @@ namespace App1
         public void editBtnClicEvent2(object sender, EventArgs e)
         {
 
+            
+            // dbcn.DeleteUserdata(valueFromLoginUser, passwordFromLogin);
 
-            dbcn.DeleteUserdata(valueFromLoginUser, passwordFromLogin);
+            //Console.WriteLine("Deleted SUCCESSFULLY");
+            //alert.SetTitle("Deleted");
 
-            Console.WriteLine("Deleted SUCCESSFULLY");
-            alert.SetTitle("Deleted");
+            // alert.SetMessage("Details Deleted");
 
-            alert.SetMessage("Details Deleted");
+            //alert.SetPositiveButton("OK", alertOKButton);
 
-            alert.SetPositiveButton("OK", alertOKButton);
+            //alert.SetNegativeButton("Cancel", alertOKButton);
 
-            alert.SetNegativeButton("Cancel", alertOKButton);
+            //Dialog myDialog = alert.Create();
 
-            Dialog myDialog = alert.Create();
-
-            myDialog.Show();
+            //myDialog.Show();
 
         }
 
@@ -185,6 +205,41 @@ namespace App1
             System.Console.WriteLine("OK Button Pressed");
 
         }
+
+        public void mySearchMethod(object sender, SearchView.QueryTextChangeEventArgs e)
+        {
+            locnArray2.Clear();
+            var mySearchValue = e.NewText;
+            System.Console.WriteLine("Search Text is :  is \n\n " + mySearchValue);
+
+            foreach (string item in locnArray)
+            {
+                if (item.Contains(mySearchValue))
+                {
+                    locnArray2.Add(item);
+                    System.Console.WriteLine("Match: " + item);
+                }
+            }
+
+            myAdapter = new ArrayAdapter
+                (this, Android.Resource.Layout.SimpleListItem1, locnArray2);
+            myList.Adapter = myAdapter;
+        }
+
+        public void myIteamClickMethod(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            System.Console.WriteLine("I am clicking on the list item \n\n");
+            var indexValue = e.Position;
+            var myValue = locnArray2[indexValue];
+            System.Console.WriteLine("Value is \n\n " + myValue);
+            Intent newScreen = new Intent(this, typeof(foodlist));
+
+
+
+            StartActivity(newScreen);
+
+        }
+
     }
 
 

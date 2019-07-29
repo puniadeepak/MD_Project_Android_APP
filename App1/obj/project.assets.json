@@ -480,11 +480,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Davinder Dhaliwal\\Desktop\\project\\App1\\App1\\App1.csproj",
+      "projectUniqueName": "F:\\project\\App1\\App1\\App1.csproj",
       "projectName": "App1",
-      "projectPath": "C:\\Users\\Davinder Dhaliwal\\Desktop\\project\\App1\\App1\\App1.csproj",
+      "projectPath": "F:\\project\\App1\\App1\\App1.csproj",
       "packagesPath": "C:\\Users\\Davinder Dhaliwal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Davinder Dhaliwal\\Desktop\\project\\App1\\App1\\obj\\",
+      "outputPath": "F:\\project\\App1\\App1\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
