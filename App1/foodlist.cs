@@ -52,8 +52,8 @@ namespace App1
             };
 
 
-            AddTabToActionBar("Snack"); //First Tab
-            AddTabToActionBar("Drink"); //Second Tab
+            AddTabToActionBar("Drinks"); //First Tab
+            AddTabToActionBar("Snaks"); //Second Tab
             
 
         }
