@@ -33,8 +33,8 @@ namespace App1
 
             SetContentView(Resource.Layout.foodlist);
             //adding items to drink list
-            myUsersList2.Add(new UserObject("Coffee", "1.99", Resource.Drawable.drink1));
-            myUsersList2.Add(new UserObject("Dark Roast", "2.99", Resource.Drawable.drink2));
+            myUsersList2.Add(new UserObject("Coffee", "$1.99", Resource.Drawable.drink1));
+            myUsersList2.Add(new UserObject("Dark Roast", "$2.99", Resource.Drawable.drink2));
             myUsersList2.Add(new UserObject("Lemonade", "2.99", Resource.Drawable.drink3));
             myUsersList2.Add(new UserObject("Choco Chips", "2.00", Resource.Drawable.drink4));
 
@@ -46,15 +46,15 @@ namespace App1
 
             _fragmentsArray = new Fragment[]
             {
-            new Fragment1( "Mike",myUsersList2, this),
-            new SecondFragment("secondlist",mysnackList2, this ),
-            
+            new Fragment1( myUsersList2, this),
+            new SecondFragment(mysnackList2, this ),
+
             };
 
 
-            AddTabToActionBar("Drinks"); //First Tab
-            AddTabToActionBar("Snaks"); //Second Tab
-            
+            AddTabToActionBar("Drink"); //First Tab
+            AddTabToActionBar("Snack"); //Second Tab
+
 
         }
 
@@ -88,4 +88,3 @@ namespace App1
 
     }
 }
-        

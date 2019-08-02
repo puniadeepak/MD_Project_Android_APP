@@ -3035,7 +3035,7 @@ containing a value of this type.
         public static final int fill_vertical=0x7f080048;
         public static final int fixed=0x7f080054;
         public static final int forever=0x7f080058;
-        public static final int frameLayout1=0x7f0800a8;
+        public static final int frameLayout1=0x7f0800a7;
         public static final int ghost_view=0x7f08000a;
         public static final int home=0x7f080005;
         public static final int homeAsUp=0x7f080021;
@@ -3051,7 +3051,7 @@ containing a value of this type.
         public static final int left=0x7f080049;
         public static final int line1=0x7f080017;
         public static final int line3=0x7f080018;
-        public static final int listID=0x7f0800a7;
+        public static final int listID=0x7f0800a6;
         public static final int listMode=0x7f08001d;
         public static final int list_item=0x7f080061;
         public static final int masked=0x7f0800cc;
@@ -3061,7 +3061,6 @@ containing a value of this type.
         public static final int mini=0x7f080053;
         public static final int multiply=0x7f080028;
         public static final int myListView=0x7f0800ca;
-        public static final int myNameIdl=0x7f0800a5;
         public static final int nameID=0x7f080095;
         public static final int navigation_header_container=0x7f08009f;
         public static final int never=0x7f08003b;
@@ -3095,7 +3094,7 @@ containing a value of this type.
         public static final int scrollIndicatorUp=0x7f080067;
         public static final int scrollView=0x7f080068;
         public static final int scrollable=0x7f080055;
-        public static final int searchID=0x7f0800a6;
+        public static final int searchID=0x7f0800a5;
         public static final int search_badge=0x7f080080;
         public static final int search_bar=0x7f08007f;
         public static final int search_button=0x7f080081;
@@ -3125,7 +3124,8 @@ containing a value of this type.
         public static final int status_bar_latest_event_content=0x7f0800b0;
         public static final int submenuarrow=0x7f080076;
         public static final int submit_area=0x7f080087;
-        public static final int t1=0x7f0800a9;
+        public static final int t1=0x7f0800a8;
+        public static final int t2=0x7f0800a9;
         public static final int tabMode=0x7f08001f;
         public static final int tag_transition_group=0x7f080019;
         public static final int text=0x7f08001a;

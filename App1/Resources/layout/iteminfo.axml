@@ -59,7 +59,7 @@
         android:background="#E60023"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:text="Sign UP" />
+        android:text="Add To Order" />
 
 
 </LinearLayout>

@@ -6,12 +6,6 @@
     android:layout_width="match_parent" 
     android:layout_height="match_parent">
     
-    <TextView
-        android:id="@+id/myNameIdl"
-        android:layout_width="200dp" 
-        android:layout_height="50dp"
-     
-    />
 	<SearchView
        android:layout_height="50dp"
        android:layout_width="match_parent"

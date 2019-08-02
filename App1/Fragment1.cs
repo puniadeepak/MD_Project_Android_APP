@@ -23,14 +23,14 @@ namespace App1
         SearchView mySearch;
 
         List<UserObject> myUsersList;
-        public String myName;
+        
         public Activity myContext;
         ArrayAdapter myAdapter;
 
 
-        public Fragment1(string name,List<UserObject> templist, Activity context)
+        public Fragment1(List<UserObject> templist, Activity context)
         {
-            myName = name;
+            
             myUsersList = templist;
             myContext = context;
         }
@@ -49,7 +49,7 @@ namespace App1
             View myView = inflater.Inflate(Resource.Layout.FirstTapLayout,
                 container, false);
             ListView myList = myView.FindViewById<ListView>(Resource.Id.listID);
-            myView.FindViewById<TextView>(Resource.Id.myNameIdl).Text = myName;
+            
 
            
             MyCustomAdapter myAdapter = new MyCustomAdapter(myContext, myUsersList);

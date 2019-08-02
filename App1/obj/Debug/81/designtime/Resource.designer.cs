@@ -2396,8 +2396,8 @@ namespace App1
 			// aapt resource value: 0x7F0C0015
 			public const int add = 2131492885;
 			
-			// aapt resource value: 0x7F020021
-			public const int add_button = 2130837537;
+			// aapt resource value: 0x7F020020
+			public const int add_button = 2130837536;
 			
 			// aapt resource value: 0x7F020014
 			public const int ageID = 2130837524;
@@ -2456,8 +2456,8 @@ namespace App1
 			// aapt resource value: 0x7F0C0026
 			public const int default_activity_button = 2131492902;
 			
-			// aapt resource value: 0x7F020033
-			public const int DeleteBtn = 2130837555;
+			// aapt resource value: 0x7F020032
+			public const int DeleteBtn = 2130837554;
 			
 			// aapt resource value: 0x7F0C0027
 			public const int design_bottom_sheet = 2131492903;
@@ -2474,20 +2474,20 @@ namespace App1
 			// aapt resource value: 0x7F0C002B
 			public const int design_navigation_view = 2131492907;
 			
-			// aapt resource value: 0x7F020030
-			public const int display_age = 2130837552;
-			
 			// aapt resource value: 0x7F020029
-			public const int display_email = 2130837545;
+			public const int display_age = 2130837545;
 			
 			// aapt resource value: 0x7F020028
-			public const int display_name = 2130837544;
+			public const int display_email = 2130837544;
+			
+			// aapt resource value: 0x7F020027
+			public const int display_name = 2130837543;
+			
+			// aapt resource value: 0x7F020030
+			public const int display_password = 2130837552;
 			
 			// aapt resource value: 0x7F020031
-			public const int display_password = 2130837553;
-			
-			// aapt resource value: 0x7F020032
-			public const int editBtn = 2130837554;
+			public const int editBtn = 2130837553;
 			
 			// aapt resource value: 0x7F0C002C
 			public const int edit_query = 2131492908;
@@ -2513,8 +2513,8 @@ namespace App1
 			// aapt resource value: 0x7F0C0009
 			public const int forever = 2131492873;
 			
-			// aapt resource value: 0x7F020018
-			public const int frameLayout1 = 2130837528;
+			// aapt resource value: 0x7F020017
+			public const int frameLayout1 = 2130837527;
 			
 			// aapt resource value: 0x7F0C0034
 			public const int ghost_view = 2131492916;
@@ -2555,8 +2555,8 @@ namespace App1
 			// aapt resource value: 0x7F0C000F
 			public const int line3 = 2131492879;
 			
-			// aapt resource value: 0x7F020017
-			public const int listID = 2130837527;
+			// aapt resource value: 0x7F020016
+			public const int listID = 2130837526;
 			
 			// aapt resource value: 0x7F0C0040
 			public const int listMode = 2131492928;
@@ -2579,11 +2579,8 @@ namespace App1
 			// aapt resource value: 0x7F0C0046
 			public const int multiply = 2131492934;
 			
-			// aapt resource value: 0x7F020034
-			public const int myListView = 2130837556;
-			
-			// aapt resource value: 0x7F020015
-			public const int myNameIdl = 2130837525;
+			// aapt resource value: 0x7F020033
+			public const int myListView = 2130837555;
 			
 			// aapt resource value: 0x7F020013
 			public const int nameID = 2130837523;
@@ -2651,8 +2648,8 @@ namespace App1
 			// aapt resource value: 0x7F0C005A
 			public const int screen = 2131492954;
 			
-			// aapt resource value: 0x7F020027
-			public const int scroll = 2130837543;
+			// aapt resource value: 0x7F020026
+			public const int scroll = 2130837542;
 			
 			// aapt resource value: 0x7F0C005E
 			public const int scrollable = 2131492958;
@@ -2666,8 +2663,8 @@ namespace App1
 			// aapt resource value: 0x7F0C005D
 			public const int scrollView = 2131492957;
 			
-			// aapt resource value: 0x7F020016
-			public const int searchID = 2130837526;
+			// aapt resource value: 0x7F020015
+			public const int searchID = 2130837525;
 			
 			// aapt resource value: 0x7F0C005F
 			public const int search_badge = 2131492959;
@@ -2744,26 +2741,26 @@ namespace App1
 			// aapt resource value: 0x7F0C0076
 			public const int submit_area = 2131492982;
 			
-			// aapt resource value: 0x7F020024
-			public const int s_age = 2130837540;
-			
-			// aapt resource value: 0x7F020026
-			public const int s_button1 = 2130837542;
-			
 			// aapt resource value: 0x7F020023
-			public const int s_email = 2130837539;
+			public const int s_age = 2130837539;
 			
 			// aapt resource value: 0x7F020025
-			public const int s_pass = 2130837541;
+			public const int s_button1 = 2130837541;
 			
 			// aapt resource value: 0x7F020022
-			public const int s_userNameID = 2130837538;
+			public const int s_email = 2130837538;
+			
+			// aapt resource value: 0x7F020024
+			public const int s_pass = 2130837540;
+			
+			// aapt resource value: 0x7F020021
+			public const int s_userNameID = 2130837537;
+			
+			// aapt resource value: 0x7F020018
+			public const int t1 = 2130837528;
 			
 			// aapt resource value: 0x7F020019
-			public const int t1 = 2130837529;
-			
-			// aapt resource value: 0x7F020020
-			public const int t2 = 2130837536;
+			public const int t2 = 2130837529;
 			
 			// aapt resource value: 0x7F0C0077
 			public const int tabMode = 2131492983;
