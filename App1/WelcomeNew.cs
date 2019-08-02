@@ -57,6 +57,7 @@ namespace App1
             ICursor myresut1;
             /// ???
             dbcn = new DBHelperclass(this);
+            dbcn.clearorderlist();
             myresut1 = dbcn.SelectUserdata(valueFromLoginUser, passwordFromLogin);
 
             myAdapter = new ArrayAdapter

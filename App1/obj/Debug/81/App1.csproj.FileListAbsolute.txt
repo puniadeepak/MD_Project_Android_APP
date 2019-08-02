@@ -220,3 +220,5 @@ F:\project\App1\App1\obj\Debug\81\res\drawable\snack1.png
 F:\project\App1\App1\obj\Debug\81\res\drawable\snack2.png
 F:\project\App1\App1\obj\Debug\81\res\drawable\snack3.png
 F:\project\App1\App1\obj\Debug\81\res\drawable\snack4.png
+F:\project\App1\App1\obj\Debug\81\res\layout\orderlist.xml
+F:\project\App1\App1\obj\Debug\81\res\layout\orderlistcustomadapptor.xml

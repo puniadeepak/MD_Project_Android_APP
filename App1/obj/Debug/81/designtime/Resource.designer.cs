@@ -3095,7 +3095,13 @@ namespace App1
 			public const int notification_template_part_time = 2131689478;
 			
 			// aapt resource value: 0x7F030007
-			public const int SecondTabLayout = 2130903047;
+			public const int orderlist = 2130903047;
+			
+			// aapt resource value: 0x7F030008
+			public const int orderListCustomAdapptor = 2130903048;
+			
+			// aapt resource value: 0x7F030009
+			public const int SecondTabLayout = 2130903049;
 			
 			// aapt resource value: 0x7F0F0038
 			public const int select_dialog_item_material = 2131689528;
@@ -3106,8 +3112,8 @@ namespace App1
 			// aapt resource value: 0x7F0F003A
 			public const int select_dialog_singlechoice_material = 2131689530;
 			
-			// aapt resource value: 0x7F030008
-			public const int signup = 2130903048;
+			// aapt resource value: 0x7F030010
+			public const int signup = 2130903056;
 			
 			// aapt resource value: 0x7F0F003B
 			public const int support_simple_spinner_dropdown_item = 2131689531;
@@ -3115,8 +3121,8 @@ namespace App1
 			// aapt resource value: 0x7F0F003C
 			public const int tooltip = 2131689532;
 			
-			// aapt resource value: 0x7F030009
-			public const int welcomeLayout = 2130903049;
+			// aapt resource value: 0x7F030011
+			public const int welcomeLayout = 2130903057;
 			
 			static Layout()
 			{

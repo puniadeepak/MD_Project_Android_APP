@@ -114,6 +114,48 @@ namespace App1
 
         }
 
+        //getting orderlist data
+        public ICursor orderList()
+        {
+            String selectStm = "Select * from " + tableName + " where email='0' and password='0' ";
+            Console.WriteLine("Orderlist statement: "+selectStm);
+            ICursor myresut1 = connectionObj.RawQuery(selectStm, null);
+
+            return myresut1;
+            //String selectStmwithId = "Select * from "+ tableName " where id="+id +"and name="+nameFiled;
+            //myresut.Count >0
+
+
+        }
+
+        //clear orderlist database on start of app
+        public void clearorderlist()
+        {
+            String selectStm = "DELETE from " + tableName + " where email='0' and password='0' ";
+            Console.WriteLine("Orderlist statement: " + selectStm);
+            connectionObj.ExecSQL(selectStm);
+
+
+            //String selectStmwithId = "Select * from "+ tableName " where id="+id +"and name="+nameFiled;
+            //myresut.Count >0
+
+
+        }
+
+        //delete item from orderlist
+        public void deleteitem(string val1)
+        {
+            String selectStm = "DELETE from " + tableName + " where names='" + val1 + "'";
+            Console.WriteLine("Orderlist statement: " + selectStm);
+            connectionObj.ExecSQL(selectStm);
+
+
+            //String selectStmwithId = "Select * from "+ tableName " where id="+id +"and name="+nameFiled;
+            //myresut.Count >0
+
+
+        }
+
         public void DeleteUserdata(string val1, string val2)
         {
             String selectStm = "DELETE from " + tableName + " where names='" + val1 + "' and password='" + val2 + "'";

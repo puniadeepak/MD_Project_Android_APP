@@ -19,8 +19,8 @@ namespace App1
         TextView itemDetails, itemPrice;
         ImageView itemimg;
         Button itemOrder;
-
         
+
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -44,7 +44,8 @@ namespace App1
                 itemPrice.Text = "Price: $1.99";
                 int resourceId = (int)typeof(Resource.Drawable).GetField("drink1").GetValue(null);
                 itemimg.SetImageResource(resourceId);
-                myDB.InsertValue(resourceId, "Coffee", "0", "0", "0");
+                myDB.InsertValue(resourceId, "Coffee", "0", "1.99", "0");
+                
             }
             else if (itemid == 1)
             {
@@ -109,7 +110,11 @@ namespace App1
                 myDB.SelectMydata();
 
                 //pass details or order to next page via database
+                //SetContentView(Resource.Layout.activity_main);
+                Intent newScreen = new Intent(this, typeof(orderlist));
+                
 
+                StartActivity(newScreen);
 
             };
 
