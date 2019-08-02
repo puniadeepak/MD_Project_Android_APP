@@ -2357,8 +2357,8 @@ namespace App1
 			// aapt resource value: 0x7f080033
 			public const int CTRL = 2131230771;
 			
-			// aapt resource value: 0x7f0800ca
-			public const int DeleteBtn = 2131230922;
+			// aapt resource value: 0x7f0800cb
+			public const int DeleteBtn = 2131230923;
 			
 			// aapt resource value: 0x7f080034
 			public const int FUNCTION = 2131230772;
@@ -2537,20 +2537,20 @@ namespace App1
 			// aapt resource value: 0x7f080020
 			public const int disableHome = 2131230752;
 			
+			// aapt resource value: 0x7f0800c8
+			public const int display_age = 2131230920;
+			
 			// aapt resource value: 0x7f0800c7
-			public const int display_age = 2131230919;
+			public const int display_email = 2131230919;
 			
 			// aapt resource value: 0x7f0800c6
-			public const int display_email = 2131230918;
-			
-			// aapt resource value: 0x7f0800c5
-			public const int display_name = 2131230917;
-			
-			// aapt resource value: 0x7f0800c8
-			public const int display_password = 2131230920;
+			public const int display_name = 2131230918;
 			
 			// aapt resource value: 0x7f0800c9
-			public const int editBtn = 2131230921;
+			public const int display_password = 2131230921;
+			
+			// aapt resource value: 0x7f0800ca
+			public const int editBtn = 2131230922;
 			
 			// aapt resource value: 0x7f08007e
 			public const int edit_query = 2131230846;
@@ -2648,14 +2648,23 @@ namespace App1
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800cd
-			public const int masked = 2131230925;
+			// aapt resource value: 0x7f0800ce
+			public const int masked = 2131230926;
 			
 			// aapt resource value: 0x7f0800b1
 			public const int media_actions = 2131230897;
 			
-			// aapt resource value: 0x7f0800c4
-			public const int message = 2131230916;
+			// aapt resource value: 0x7f0800cf
+			public const int menuItem1 = 2131230927;
+			
+			// aapt resource value: 0x7f0800d0
+			public const int menuItem2 = 2131230928;
+			
+			// aapt resource value: 0x7f0800d1
+			public const int menuItem3 = 2131230929;
+			
+			// aapt resource value: 0x7f0800c5
+			public const int message = 2131230917;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2666,8 +2675,8 @@ namespace App1
 			// aapt resource value: 0x7f080028
 			public const int multiply = 2131230760;
 			
-			// aapt resource value: 0x7f0800cb
-			public const int myListView = 2131230923;
+			// aapt resource value: 0x7f0800cc
+			public const int myListView = 2131230924;
 			
 			// aapt resource value: 0x7f0800be
 			public const int myListView3 = 2131230910;
@@ -2729,20 +2738,20 @@ namespace App1
 			// aapt resource value: 0x7f0800b5
 			public const int right_side = 2131230901;
 			
+			// aapt resource value: 0x7f0800c2
+			public const int s_age = 2131230914;
+			
+			// aapt resource value: 0x7f0800c4
+			public const int s_button1 = 2131230916;
+			
 			// aapt resource value: 0x7f0800c1
-			public const int s_age = 2131230913;
+			public const int s_email = 2131230913;
 			
 			// aapt resource value: 0x7f0800c3
-			public const int s_button1 = 2131230915;
+			public const int s_pass = 2131230915;
 			
 			// aapt resource value: 0x7f0800c0
-			public const int s_email = 2131230912;
-			
-			// aapt resource value: 0x7f0800c2
-			public const int s_pass = 2131230914;
-			
-			// aapt resource value: 0x7f0800bf
-			public const int s_userNameID = 2131230911;
+			public const int s_userNameID = 2131230912;
 			
 			// aapt resource value: 0x7f08000c
 			public const int save_image_matrix = 2131230732;
@@ -2836,6 +2845,9 @@ namespace App1
 			
 			// aapt resource value: 0x7f080064
 			public const int spacer = 2131230820;
+			
+			// aapt resource value: 0x7f0800bf
+			public const int spinner1 = 2131230911;
 			
 			// aapt resource value: 0x7f080008
 			public const int split_action_bar = 2131230728;
@@ -2960,8 +2972,8 @@ namespace App1
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800cc
-			public const int visible = 2131230924;
+			// aapt resource value: 0x7f0800cd
+			public const int visible = 2131230925;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3241,6 +3253,22 @@ namespace App1
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f0e0000
+			public const int menu = 2131623936;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}

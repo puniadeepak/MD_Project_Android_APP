@@ -2957,7 +2957,7 @@ containing a value of this type.
     public static final class id {
         public static final int ALT=0x7f080032;
         public static final int CTRL=0x7f080033;
-        public static final int DeleteBtn=0x7f0800ca;
+        public static final int DeleteBtn=0x7f0800cb;
         public static final int FUNCTION=0x7f080034;
         public static final int META=0x7f080035;
         public static final int SHIFT=0x7f080036;
@@ -3017,11 +3017,11 @@ containing a value of this type.
         public static final int design_menu_item_text=0x7f0800a1;
         public static final int design_navigation_view=0x7f0800a0;
         public static final int disableHome=0x7f080020;
-        public static final int display_age=0x7f0800c7;
-        public static final int display_email=0x7f0800c6;
-        public static final int display_name=0x7f0800c5;
-        public static final int display_password=0x7f0800c8;
-        public static final int editBtn=0x7f0800c9;
+        public static final int display_age=0x7f0800c8;
+        public static final int display_email=0x7f0800c7;
+        public static final int display_name=0x7f0800c6;
+        public static final int display_password=0x7f0800c9;
+        public static final int editBtn=0x7f0800ca;
         public static final int edit_query=0x7f08007e;
         public static final int end=0x7f080030;
         public static final int end_padder=0x7f0800bd;
@@ -3054,13 +3054,16 @@ containing a value of this type.
         public static final int listID=0x7f0800a6;
         public static final int listMode=0x7f08001d;
         public static final int list_item=0x7f080061;
-        public static final int masked=0x7f0800cd;
+        public static final int masked=0x7f0800ce;
         public static final int media_actions=0x7f0800b1;
-        public static final int message=0x7f0800c4;
+        public static final int menuItem1=0x7f0800cf;
+        public static final int menuItem2=0x7f0800d0;
+        public static final int menuItem3=0x7f0800d1;
+        public static final int message=0x7f0800c5;
         public static final int middle=0x7f080031;
         public static final int mini=0x7f080053;
         public static final int multiply=0x7f080028;
-        public static final int myListView=0x7f0800cb;
+        public static final int myListView=0x7f0800cc;
         public static final int myListView3=0x7f0800be;
         public static final int nameID=0x7f080095;
         public static final int navigation_header_container=0x7f08009f;
@@ -3081,11 +3084,11 @@ containing a value of this type.
         public static final int right=0x7f08004a;
         public static final int right_icon=0x7f0800b9;
         public static final int right_side=0x7f0800b5;
-        public static final int s_age=0x7f0800c1;
-        public static final int s_button1=0x7f0800c3;
-        public static final int s_email=0x7f0800c0;
-        public static final int s_pass=0x7f0800c2;
-        public static final int s_userNameID=0x7f0800bf;
+        public static final int s_age=0x7f0800c2;
+        public static final int s_button1=0x7f0800c4;
+        public static final int s_email=0x7f0800c1;
+        public static final int s_pass=0x7f0800c3;
+        public static final int s_userNameID=0x7f0800c0;
         public static final int save_image_matrix=0x7f08000c;
         public static final int save_non_transition_alpha=0x7f08000d;
         public static final int save_scale_type=0x7f08000e;
@@ -3117,6 +3120,7 @@ containing a value of this type.
         public static final int snackbar_text=0x7f08009d;
         public static final int snap=0x7f080043;
         public static final int spacer=0x7f080064;
+        public static final int spinner1=0x7f0800bf;
         public static final int split_action_bar=0x7f080008;
         public static final int src_atop=0x7f08002a;
         public static final int src_in=0x7f08002b;
@@ -3158,7 +3162,7 @@ containing a value of this type.
         public static final int userNameID=0x7f08008d;
         public static final int userNameLblID=0x7f08008c;
         public static final int view_offset_helper=0x7f080016;
-        public static final int visible=0x7f0800cc;
+        public static final int visible=0x7f0800cd;
         public static final int withText=0x7f08003c;
         public static final int wrap_content=0x7f08002e;
     }
@@ -3245,6 +3249,9 @@ containing a value of this type.
         public static final int support_simple_spinner_dropdown_item=0x7f040043;
         public static final int tooltip=0x7f040044;
         public static final int welcomelayout=0x7f040045;
+    }
+    public static final class menu {
+        public static final int menu=0x7f0e0000;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;

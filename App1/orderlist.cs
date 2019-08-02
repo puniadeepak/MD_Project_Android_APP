@@ -32,6 +32,9 @@ namespace App1
         DBHelperclass myDB;
         ICursor myresut3;
 
+        Spinner spinnerView;
+        string[] myCategory = { "Credit Card", "Debit Card", "Cash" };
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -93,10 +96,74 @@ namespace App1
             //Search Events
             mySearch.QueryTextChange += mySearchMethod;
             */
+
+            //adding menu in orderlist
+            spinnerView = FindViewById<Spinner>(Resource.Id.spinner1);
+
+            spinnerView.Adapter = new ArrayAdapter
+                (this, Android.Resource.Layout.SimpleListItem1, myCategory);
+
+
+            spinnerView.ItemSelected += MyItemSelectedMethod;
+
+        }
+        //Menu Code
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            // set the menu layout on Main Activity  
+            MenuInflater.Inflate(Resource.Menu.menu, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.menuItem1:
+                    {
+                        // add your code  
+                        return true;
+                    }
+                case Resource.Id.menuItem2:
+                    {
+                        // add your code  
+                        return true;
+                    }
+                case Resource.Id.menuItem3:
+                    {
+                        // add your code  
+                        return true;
+                    }
+            }
+
+            return base.OnOptionsItemSelected(item);
         }
 
 
-        public void mySearchMethod(object sender, SearchView.QueryTextChangeEventArgs e)
+
+        void MyItemSelectedMethod(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            var index = e.Position;
+
+            var value = myCategory[index];
+            System.Console.WriteLine("value is " + value);
+
+
+            if (value.ToLower().Equals("Action"))
+            {
+                //create a veg array and create as a new adater 
+
+            }
+
+        }
+
+
+
+    //menu code end here
+
+
+
+    public void mySearchMethod(object sender, SearchView.QueryTextChangeEventArgs e)
         {
 
             var mySearchValue = e.NewText;
