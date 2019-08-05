@@ -19,7 +19,7 @@ namespace App1
     {
         ListView listView;
         SearchView mySearch;
-
+        TextView totalprice;
         List<UserObject> myUsersList3 = new List<UserObject>();
 
 
@@ -33,7 +33,7 @@ namespace App1
         ICursor myresut3;
 
         Spinner spinnerView;
-        string[] myCategory = { "Credit Card", "Debit Card", "Cash" };
+        string[] myCategory = { "Credit Card", "Debit Card", "Cash" , "I Don't Have Money" };
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -41,11 +41,12 @@ namespace App1
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.orderlist);
             listView = FindViewById<ListView>(Resource.Id.myListView3);
-
+            totalprice = FindViewById<TextView>(Resource.Id.price1);
             //get orderlist data from database
             myDB = new DBHelperclass(this);
             myresut3= myDB.orderList();
             var myId1 = 1; var nameValue1 = ""; var emailValue1 = ""; var ageValue1 = ""; var passValue1 = "";
+            float price=0;
             //get cursor values
             if (myresut3.Count > 0)
             {
@@ -70,8 +71,8 @@ namespace App1
 
                     //adding data in userlist
                     myUsersList3.Add(new UserObject(nameValue1, ageValue1, myId1));
-                    
 
+                    price += float.Parse(ageValue1);
                 }
             }
             else
@@ -85,6 +86,7 @@ namespace App1
             MyCustomAdapter myAdapter = new MyCustomAdapter(this, myUsersList3);
 
             listView.Adapter = myAdapter;
+            totalprice.Text = price.ToString("0.00");
             listView.ItemClick += myIteamClickMethod;
             /*
             myAdapter = new ArrayAdapter
@@ -107,37 +109,7 @@ namespace App1
             spinnerView.ItemSelected += MyItemSelectedMethod;
 
         }
-        //Menu Code
-        public override bool OnCreateOptionsMenu(IMenu menu)
-        {
-            // set the menu layout on Main Activity  
-            MenuInflater.Inflate(Resource.Menu.menu, menu);
-            return base.OnCreateOptionsMenu(menu);
-        }
-
-        public override bool OnOptionsItemSelected(IMenuItem item)
-        {
-            switch (item.ItemId)
-            {
-                case Resource.Id.menuItem1:
-                    {
-                        // add your code  
-                        return true;
-                    }
-                case Resource.Id.menuItem2:
-                    {
-                        // add your code  
-                        return true;
-                    }
-                case Resource.Id.menuItem3:
-                    {
-                        // add your code  
-                        return true;
-                    }
-            }
-
-            return base.OnOptionsItemSelected(item);
-        }
+        
 
 
 
@@ -155,6 +127,13 @@ namespace App1
 
             }
 
+            if(value.Equals("I Don't Have Money"))
+            {
+                Intent newScreen1 = new Intent(this, typeof(nomoney));
+
+                StartActivity(newScreen1);
+
+            }
         }
 
 
@@ -183,12 +162,14 @@ namespace App1
             myDB = new DBHelperclass(this);
             myDB.deleteitem(name);
             myUsersList3.RemoveAt(indexValue);
-
+            float price=0;
             foreach (UserObject myObject in myUsersList3)
             {
                 // Do something nifty here
                 myDB.InsertValue(myObject.image, myObject.name, "0", myObject.age, "0");
+                price += float.Parse(myObject.age);
             }
+            totalprice.Text = price.ToString("0.00");
 
             MyCustomAdapter myAdapter = new MyCustomAdapter(this, myUsersList3);
 

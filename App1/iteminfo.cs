@@ -53,49 +53,56 @@ namespace App1
                 itemPrice.Text = "Price: $2.99";
                 int resourceId = (int)typeof(Resource.Drawable).GetField("drink2").GetValue(null);
                 itemimg.SetImageResource(resourceId);
+                myDB.InsertValue(resourceId, "Dark Roast", "0", "2.99", "0");
             }
             else if (itemid == 2)
             {
-                itemDetails.Text = "";
-                itemPrice.Text = "Price: $1.99";
+                itemDetails.Text = "A refreshing frozen drink blended with real lemon, sweetened and served ice cold, this tangy crowd pleaser comes in Original or Raspberry Flavour. ";
+                itemPrice.Text = "Price: $2.99";
                 int resourceId = (int)typeof(Resource.Drawable).GetField("drink3").GetValue(null);
                 itemimg.SetImageResource(resourceId);
+                myDB.InsertValue(resourceId, "Lemonade", "0", "2.99", "0");
             }
             else if (itemid == 3)
             {
-                itemDetails.Text = "";
-                itemPrice.Text = "Price: $1.99";
+                itemDetails.Text = "A delicious combination of real cream and layers of chocolaty goodness. It’s the perfect summer treat that takes chocolaty to the next level";
+                itemPrice.Text = "Price: $2.00";
                 int resourceId = (int)typeof(Resource.Drawable).GetField("drink4").GetValue(null);
                 itemimg.SetImageResource(resourceId);
+                myDB.InsertValue(resourceId, "Choco Chips", "0", "2.00", "0");
             }
             else if (itemid == 4)
             {
-                itemDetails.Text = "";
+                itemDetails.Text = "The ultimate breakfast bagel, made fresh on the spot. Three pieces of crisp bacon, seasoned egg patty, fresh lettuce, ripe tomato and processed cheese, all stacked up on your choice of Always Fresh Bagel. ";
                 itemPrice.Text = "Price: $1.99";
                 int resourceId = (int)typeof(Resource.Drawable).GetField("snack1").GetValue(null);
                 itemimg.SetImageResource(resourceId);
+                myDB.InsertValue(resourceId, "Bagel", "0", "1.99", "0");
             }
             else if (itemid == 5)
             {
                 itemDetails.Text = "This is what “good morning” tastes like. Your choice of sausage, three pieces of crisp bacon, seasoned egg omelette and processed cheese on a Homestyle Biscuit, English Muffin or toasted Bagel. Not a meat lover? Hold the sausage, or bacon. ";
-                itemPrice.Text = "Price: $1.99";
+                itemPrice.Text = "Price: $2.99";
                 int resourceId = (int)typeof(Resource.Drawable).GetField("snack2").GetValue(null);
                 itemimg.SetImageResource(resourceId);
+                myDB.InsertValue(resourceId, "Sandwich", "0", "2.99", "0");
 
             }
             else if (itemid == 6)
             {
-                itemDetails.Text = "";
-                itemPrice.Text = "Price: $1.99";
+                itemDetails.Text = "Available with our grilled seasoned chicken strips, bacon, tomato, lettuce and ranch sauce.";
+                itemPrice.Text = "Price: $2.99";
                 int resourceId = (int)typeof(Resource.Drawable).GetField("snack3").GetValue(null);
                 itemimg.SetImageResource(resourceId);
+                myDB.InsertValue(resourceId, "Egg Wrap", "0", "2.99", "0");
             }
             else if (itemid == 7)
             {
-                itemDetails.Text = "";
-                itemPrice.Text = "Price: $1.99";
+                itemDetails.Text = "Your choice of seasoned grilled chicken strips, cheddar cheese, lettuce, tomato and chipotle sauce wrapped in a tortilla and grilled to perfection.";
+                itemPrice.Text = "Price: $2.00";
                 int resourceId = (int)typeof(Resource.Drawable).GetField("snack4").GetValue(null);
                 itemimg.SetImageResource(resourceId);
+                myDB.InsertValue(resourceId, "Chicken Wrap", "0", "2.00", "0");
             }
 
             itemOrder.Click += delegate

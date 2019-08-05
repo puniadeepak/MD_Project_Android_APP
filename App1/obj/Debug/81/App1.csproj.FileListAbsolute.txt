@@ -190,6 +190,7 @@ F:\project\App1\App1\obj\Debug\81\res\drawable\snack4.png
 F:\project\App1\App1\obj\Debug\81\res\layout\orderlist.xml
 F:\project\App1\App1\obj\Debug\81\res\layout\orderlistcustomadapptor.xml
 F:\project\App1\App1\obj\Debug\81\res\menu\menu.xml
+F:\project\App1\App1\obj\Debug\81\res\layout\nomoney.xml
 F:\project\App1\App1\obj\Debug\81\R.cs.flag
 F:\project\App1\App1\obj\Debug\81\R.txt
 F:\project\App1\App1\obj\Debug\81\uploadflags.txt
