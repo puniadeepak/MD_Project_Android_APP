@@ -11,6 +11,26 @@
 	android:gravity="center"
 	android:background="#dc0f2d">
 
+		
+		<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/greetings1"
+        android:text="Welcome to Tim Hortons"
+			android:textSize="18dp"
+        android:textColor="#ffffff"
+
+    />
+		<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/greetings"
+        android:text=""
+			android:textSize="24dp"
+        android:textColor="#ffffff"
+
+    />
+		
 
 	<EditText
                 android:layout_width="250dp"
@@ -72,7 +92,7 @@
         android:text="Delete Account" />
 
 		<View
-			android:layout_marginTop="70dp"
+			android:layout_marginTop="50dp"
 			android:layout_marginBottom="5dp"
     android:layout_width="fill_parent"
     android:layout_height="1dp"
@@ -102,7 +122,7 @@
     
     />   
     <ListView
-        android:layout_height="300dp"
+        android:layout_height="260dp"
         android:layout_width="match_parent"
         android:background="#dc0f2d"
         android:id="@+id/myListView"

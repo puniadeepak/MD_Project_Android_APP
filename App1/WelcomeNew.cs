@@ -20,15 +20,16 @@ namespace App1
         String valueFromLoginUser;
         String passwordFromLogin;
         EditText name, email, age, password;
+        TextView greeting;
         Button editBtn, deleteBtn;
         DBHelperclass dbcn;
         Android.App.AlertDialog.Builder alert;
         ListView myList;
         SearchView mySearch;
-        List<string> locnArray = new List<string>(){ "Location-A", "Location-B",
-                "Location-C", "Location-D"};
-        List<string> locnArray2 = new List<string>(){ "Location-A", "Location-B",
-                "Location-C", "Location-D"};
+        List<string> locnArray = new List<string>(){ "ALocation", "BLocation",
+                "CLocation", "DLocation"};
+        List<string> locnArray2 = new List<string>(){ "ALocation", "BLocation",
+                "CLocation", "DLocation"};
         
         ArrayAdapter myAdapter;
 
@@ -49,9 +50,11 @@ namespace App1
             deleteBtn = FindViewById<Button>(Resource.Id.DeleteBtn);
             alert = new Android.App.AlertDialog.Builder(this);
             myList = FindViewById<ListView>(Resource.Id.myListView);
+            greeting = FindViewById<TextView>(Resource.Id.greetings);
 
             //assign value
             name.Text = valueFromLoginUser;
+            greeting.Text = valueFromLoginUser.ToUpper() ;
             //Read Only
             name.Visibility = Android.Views.ViewStates.Gone;
             ICursor myresut1;

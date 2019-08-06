@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.Database;
@@ -19,7 +19,7 @@ namespace App1
     {
         ListView listView;
         SearchView mySearch;
-        TextView totalprice;
+        TextView totalprice, removed_msg;
         List<UserObject> myUsersList3 = new List<UserObject>();
 
 
@@ -32,16 +32,21 @@ namespace App1
         DBHelperclass myDB;
         ICursor myresut3;
 
+        //spinner
         Spinner spinnerView;
         string[] myCategory = { "Select Payment Method","Credit Card", "Debit Card", "Cash" , "I Don't Have Money" };
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+
+
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.orderlist);
             listView = FindViewById<ListView>(Resource.Id.myListView3);
             totalprice = FindViewById<TextView>(Resource.Id.price1);
+            removed_msg = FindViewById<TextView>(Resource.Id.removed);
+            removed_msg.Visibility = Android.Views.ViewStates.Gone;
             //get orderlist data from database
             myDB = new DBHelperclass(this);
             myresut3= myDB.orderList();
@@ -163,6 +168,8 @@ namespace App1
             myDB.deleteitem(name);
             myUsersList3.RemoveAt(indexValue);
             float price=0;
+
+            //calculating total price of items in list
             foreach (UserObject myObject in myUsersList3)
             {
                 // Do something nifty here
@@ -170,10 +177,13 @@ namespace App1
                 price += float.Parse(myObject.age);
             }
             totalprice.Text = "$"+price.ToString("0.00");
-
+            
             MyCustomAdapter myAdapter = new MyCustomAdapter(this, myUsersList3);
 
             listView.Adapter = myAdapter;
+            removed_msg.Visibility = Android.Views.ViewStates.Visible;
+            
+
         }
     }
 }
