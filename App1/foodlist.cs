@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace App1
 {
-    [Activity(Label = "foodlist")]
+    [Activity(Label = "What you want to order?")]
     public class foodlist : Activity
     {
         List<UserObject> myUsersList2 = new List<UserObject>();

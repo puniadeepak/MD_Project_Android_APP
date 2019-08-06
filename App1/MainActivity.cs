@@ -6,7 +6,7 @@ using Android.Content;
 
 namespace App1
 {
-    [Activity(Label = "@string/app_name", MainLauncher = true)]
+    [Activity(Label = "Tim Hortons", MainLauncher = true)]
     public class MainActivity : Activity
     {
 
@@ -121,7 +121,7 @@ namespace App1
 
                     {
 
-
+                        //show alert dialog button
 
                         alert.SetTitle("Error");
 

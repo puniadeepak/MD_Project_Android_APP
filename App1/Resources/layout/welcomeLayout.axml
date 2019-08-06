@@ -60,7 +60,7 @@
         android:background="#E60023"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:text="Edit" />
+        android:text="Change Your Details" />
 	<Button
         android:layout_marginTop="10dp"
         android:id="@+id/DeleteBtn"
@@ -69,11 +69,34 @@
         android:background="#E60023"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:text="Delete" />
+        android:text="Delete Account" />
+
+		<View
+			android:layout_marginTop="70dp"
+			android:layout_marginBottom="5dp"
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="@android:color/darker_gray"/>
+
+		<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text51"
+        android:text="Please select store"
+			android:textSize="16dp"
+        android:textColor="#ffffff"
+
+    />
+		<View
+    android:layout_width="fill_parent"
+	android:layout_marginTop="5dp"		
+    android:layout_height="1dp"
+    android:background="@android:color/darker_gray"/>
 
 	 <SearchView
        android:layout_height="50dp"
        android:layout_width="match_parent"
+			android:layout_marginTop="30dp"
        android:background="#ffffff"
         android:id="@+id/searchID"
     

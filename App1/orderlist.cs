@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace App1
 {
-    [Activity(Label = "orderlist")]
+    [Activity(Label = "Your order")]
     
     public class orderlist : Activity
     {
@@ -33,7 +33,7 @@ namespace App1
         ICursor myresut3;
 
         Spinner spinnerView;
-        string[] myCategory = { "Credit Card", "Debit Card", "Cash" , "I Don't Have Money" };
+        string[] myCategory = { "Select Payment Method","Credit Card", "Debit Card", "Cash" , "I Don't Have Money" };
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -86,7 +86,7 @@ namespace App1
             MyCustomAdapter myAdapter = new MyCustomAdapter(this, myUsersList3);
 
             listView.Adapter = myAdapter;
-            totalprice.Text = price.ToString("0.00");
+            totalprice.Text = "$"+ price.ToString("0.00");
             listView.ItemClick += myIteamClickMethod;
             /*
             myAdapter = new ArrayAdapter
@@ -169,7 +169,7 @@ namespace App1
                 myDB.InsertValue(myObject.image, myObject.name, "0", myObject.age, "0");
                 price += float.Parse(myObject.age);
             }
-            totalprice.Text = price.ToString("0.00");
+            totalprice.Text = "$"+price.ToString("0.00");
 
             MyCustomAdapter myAdapter = new MyCustomAdapter(this, myUsersList3);
 

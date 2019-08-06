@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace App1
 {
-    [Activity(Label = "WelcomeNew")]
+    [Activity(Label = "Welcome to Tim Hortons")]
     public class WelcomeNew : Activity
     {
 
@@ -53,7 +53,7 @@ namespace App1
             //assign value
             name.Text = valueFromLoginUser;
             //Read Only
-            name.Enabled = false;
+            name.Visibility = Android.Views.ViewStates.Gone;
             ICursor myresut1;
             /// ???
             dbcn = new DBHelperclass(this);
@@ -97,15 +97,15 @@ namespace App1
                 //assign value
                 email.Text = emailValue1;
                 //Read Only
-                email.Enabled = false;
+                email.Visibility = Android.Views.ViewStates.Gone;
                 //assign value
                 age.Text = ageValue1;
                 //Read Only
-                age.Enabled = false;
+                age.Visibility = Android.Views.ViewStates.Gone;
                 //assign value
                 password.Text = passValue1;
                 //Read Only
-                password.Enabled = false;
+                password.Visibility = Android.Views.ViewStates.Gone;
                 System.Console.WriteLine("Name from Login ---> " + valueFromLoginUser);
                 System.Console.WriteLine("Pasword from Login ---> " + passwordFromLogin);
 
@@ -143,11 +143,11 @@ namespace App1
         {
 
 
-            name.Enabled = true;
-            email.Enabled = true;
-            age.Enabled = true;
-            password.Enabled = true;
-            editBtn.Text = "Save";
+            name.Visibility = Android.Views.ViewStates.Visible;
+            email.Visibility = Android.Views.ViewStates.Visible;
+            age.Visibility = Android.Views.ViewStates.Visible;
+            password.Visibility = Android.Views.ViewStates.Visible;
+            editBtn.Text = "Save Details";
             string namevalue = name.Text;
             string emailvalue = email.Text;
             string agevalue = age.Text;
@@ -169,12 +169,13 @@ namespace App1
 
                     myDialog.Show();
 
-                    name.Enabled = false;
-                    email.Enabled = false;
-                    age.Enabled = false;
-                    password.Enabled = false;
-                    editBtn.Text = "Edit";
-
+                    name.Visibility = Android.Views.ViewStates.Gone;
+                    email.Visibility = Android.Views.ViewStates.Gone;
+                    age.Visibility = Android.Views.ViewStates.Gone;
+                    password.Visibility = Android.Views.ViewStates.Gone;
+                    
+                    editBtn.Text = "Details Updated";
+                    editBtn.Enabled = false;
                 };
         }
 
@@ -182,20 +183,22 @@ namespace App1
         {
 
             
-            // dbcn.DeleteUserdata(valueFromLoginUser, passwordFromLogin);
+            dbcn.DeleteUserdata(valueFromLoginUser, passwordFromLogin);
 
-            //Console.WriteLine("Deleted SUCCESSFULLY");
-            //alert.SetTitle("Deleted");
+            Console.WriteLine("Deleted SUCCESSFULLY");
+            alert.SetTitle("Deleted");
 
-            // alert.SetMessage("Details Deleted");
+            alert.SetMessage("Your account has been deleted.");
 
-            //alert.SetPositiveButton("OK", alertOKButton);
+            alert.SetPositiveButton("OK", alertOKButton);
 
-            //alert.SetNegativeButton("Cancel", alertOKButton);
+            alert.SetNegativeButton("Cancel", alertOKButton);
 
-            //Dialog myDialog = alert.Create();
+            Dialog myDialog = alert.Create();
 
-            //myDialog.Show();
+            myDialog.Show();
+            Intent newScreen1 = new Intent(this, typeof(MainActivity));
+            StartActivity(newScreen1);
 
         }
 
@@ -215,7 +218,7 @@ namespace App1
 
             foreach (string item in locnArray)
             {
-                if (item.Contains(mySearchValue))
+                if (item.ToLower().Contains(mySearchValue.ToLower()))
                 {
                     locnArray2.Add(item);
                     System.Console.WriteLine("Match: " + item);

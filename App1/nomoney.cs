@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace App1
 {
-    [Activity(Label = "nomoney")]
+    [Activity(Label = "because we are students..")]
     public class nomoney : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -22,9 +22,13 @@ namespace App1
 
             // Create your application here
             SetContentView(Resource.Layout.nomoney);
-
+            //setting url for webview
             string strUrl = "https://youtube.com/embed/C31hcftHBIk";
 
+
+            /* embed youtube video 
+             * using webview
+             */
             string html = @"<html><body><div align=""center""><iframe width=""550"" height=""450"" src=""strUrl""></iframe></div></body></html>";
             var myWebView = (WebView)FindViewById(Resource.Id.videoView1);
             var settings = myWebView.Settings;

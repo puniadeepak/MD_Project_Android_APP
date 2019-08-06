@@ -6,17 +6,11 @@
     android:layout_width="match_parent" 
     android:layout_height="match_parent">
     
-	<SearchView
-       android:layout_height="50dp"
-       android:layout_width="match_parent"
-       android:background="#7a520c"
-        android:id="@+id/searchID"
-    
-    />   
+	
     <ListView
         android:id="@+id/listID"
         android:layout_width="match_parent" 
-        android:layout_height="400dp"
+        android:layout_height="match_parent"
      
      />  
 	 

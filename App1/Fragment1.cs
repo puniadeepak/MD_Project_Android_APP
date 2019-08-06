@@ -23,11 +23,11 @@ namespace App1
         SearchView mySearch;
 
         List<UserObject> myUsersList;
-        
+        List<UserObject> locnArray2 = new List<UserObject>();
         public Activity myContext;
         ArrayAdapter myAdapter;
 
-
+        //constructor
         public Fragment1(List<UserObject> templist, Activity context)
         {
             
@@ -61,15 +61,7 @@ namespace App1
 
             //return base.OnCreateView(inflater, container, savedInstanceState);
         }
-        public void mySearchMethod(object sender, SearchView.QueryTextChangeEventArgs e)
-        {
-
-            var mySearchValue = e.NewText;
-            System.Console.WriteLine("Search Text is :  is \n\n " + mySearchValue);
-
-
-
-        }
+        
 
         public void myIteamClickMethod(object sender, AdapterView.ItemClickEventArgs e)
         {

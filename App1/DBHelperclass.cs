@@ -19,7 +19,7 @@ namespace App1
     {
         Context myContex;
 
-
+        //initializing variables
         public static string DBName = "myDatabse.db";
         public static string tableName = "UserTable";
         public static string nameFiled = "names";
@@ -33,14 +33,17 @@ namespace App1
             tableName + "(" + id + " Interger" + ", " + nameFiled + " Text, " + email + " Text, " +
         age + " Text, " + pass + " Text" + ");";
 
+        //creating database object
         SQLiteDatabase connectionObj;
 
+        //initializing database
         public DBHelperclass(Context context) : base(context, name: DBName, factory: null, version: 1)
         {
             myContex = context;
             connectionObj = WritableDatabase;
         }
 
+        //executing create table query on create
         public override void OnCreate(SQLiteDatabase db)
         {
             System.Console.WriteLine("My Create Table STM \n \n" + creatTable);
@@ -156,6 +159,7 @@ namespace App1
 
         }
 
+        //delete user data from database
         public void DeleteUserdata(string val1, string val2)
         {
             String selectStm = "DELETE from " + tableName + " where names='" + val1 + "' and password='" + val2 + "'";
