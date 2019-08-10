@@ -9,12 +9,12 @@ Android application
 -Tim Hortons , order food
 
 =========================================
-Some of components used:-
+ Some of components used:-
 
-Android programming
-Fragmentation and Tab Bar
-WebView
-Custom Adaptor
-Database : SQLite
-List View
-Spinner 
+ Android programming,
+ Fragmentation and Tab Bar,
+ WebView,
+ Custom Adaptor,
+ Database : SQLite,
+ List View,
+ Spinner.
