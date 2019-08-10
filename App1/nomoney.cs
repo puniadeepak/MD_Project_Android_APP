@@ -23,7 +23,7 @@ namespace App1
             // Create your application here
             SetContentView(Resource.Layout.nomoney);
             //setting url for webview
-            string strUrl = "https://youtube.com/embed/C31hcftHBIk";
+            string strUrl = "https://www.youtube.com/embed/AZflWySybDw";
 
 
             /* embed youtube video 
